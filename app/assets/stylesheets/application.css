@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+ .response {
+  border-left: 5px solid #f0ad4e;
+ }

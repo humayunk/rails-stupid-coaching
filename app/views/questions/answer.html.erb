@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Stupid Coaching</h1>
+
+  <div class="response" >
+    <blockquote class="blockquote alert alert-light">
+      <p><%= params[:question] %></p>
+      <p><em>-You</em></p>
+    </blockquote>
+  </div>
+
+  <div class="response">
+    <blockquote class="alert alert-warning blockquote">
+      <% if params[:question] == "I am going to work" %>
+        <p>Great!</p>
+      <% elsif params[:question].end_with?("?") %>
+        <p>Silly question, get dressed and go to work!</p>
+      <% else %>
+        <p>I don't care, get dressed and go to work!</p>
+      <% end %>
+      <p><em>-Your coach</em></p>
+    </blockquote>
+  </div>
+
+  <%= link_to "Ask a new question", ask_path %>
+</div>
